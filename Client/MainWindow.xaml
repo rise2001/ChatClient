@@ -25,19 +25,13 @@
         <TextBlock HorizontalAlignment="Left" Margin="260,44,0,0" TextWrapping="Wrap" Text="Port:" VerticalAlignment="Top" Width="29"/>
         <TextBox x:Name="PortTextBox" HorizontalAlignment="Left" Margin="294,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
         <TextBlock HorizontalAlignment="Left" Margin="453,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Имя"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="490,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <Button x:Name="InOutButton" Content="Войти" HorizontalAlignment="Left" Margin="152,44,0,0" VerticalAlignment="Top" Width="92" Grid.Column="1"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="490,44,0,0" TextWrapping="Wrap" MaxLength="35" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Button x:Name="InOutButton" Content="Войти" HorizontalAlignment="Left" Margin="169,42,0,0" VerticalAlignment="Top" Width="92" Grid.Column="1" Click="InOutButton_Click"/>
         <TextBox x:Name="KeyTextBox" HorizontalAlignment="Left" Margin="58,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
         <TextBlock HorizontalAlignment="Left" Margin="21,10,0,0" TextWrapping="Wrap" Text="Ключ:" VerticalAlignment="Top"/>
-        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" Margin="23,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="623" Height="120" Grid.ColumnSpan="2"/>
-        <Button x:Name="SendButton" Content="Отправить" HorizontalAlignment="Left" Margin="152,442,0,0" VerticalAlignment="Top" Height="120" Width="109" Grid.Column="1"/>
-        <RichTextBox x:Name="MainTextBox" HorizontalAlignment="Left" Height="338" Margin="23,86,0,0" VerticalAlignment="Top" Width="751" Grid.ColumnSpan="2">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text=""/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" Margin="23,442,0,0" AcceptsReturn="True" MaxLength="255" TextWrapping="Wrap" VerticalAlignment="Top" Width="623" Height="120" Grid.ColumnSpan="2"/>
+        <Button x:Name="SendButton" Content="Отправить" HorizontalAlignment="Left" Margin="152,442,0,0" VerticalAlignment="Top" Height="120" Width="109" Grid.Column="1" Click="SendButton_Click"/>
+        <TextBox x:Name="MainTextBox" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto" Margin="23,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="True" Width="751" Height="325" Grid.ColumnSpan="2"/>
 
 
     </Grid>
