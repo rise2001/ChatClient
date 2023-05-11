@@ -43,7 +43,7 @@ namespace Client
             {
                 SendButton.IsEnabled = true;
                 InputTextBox.IsEnabled = true;
-                MainTextBox.IsEnabled = true;
+                
 
                 KeyTextBox.IsEnabled = false;
                 NameTextBox.IsEnabled = false;
@@ -72,6 +72,7 @@ namespace Client
             Array.Copy(encryptedText, 0, data, 72, encryptedText.Length);
 
             chatClient.SendMessage(data);
+            InputTextBox.Text = "";
         }
 
         private void SetRecievedText(byte[] data)
