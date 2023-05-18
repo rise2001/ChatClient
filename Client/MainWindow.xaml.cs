@@ -90,16 +90,17 @@ namespace Client
             Array.Copy(data, 72, encryptedBytes, 0, sizeOfEncryptedText);
 
             System.Windows.Application.Current.Dispatcher.Invoke(new Action(() => {
+                var key = KeyTextBox.Text;
+                var decryptedText = "сообщение не расшифровано";
                 try
                 {
-                    var key = KeyTextBox.Text;
-                    var decryptedText = encryptionService.Decrypt(key, encryptedBytes);
-                    MainTextBox.Text = MainTextBox.Text + "\n" + nameString + " : " + decryptedText;
+                    decryptedText = encryptionService.Decrypt(key, encryptedBytes);
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка при дешифровке");
                 }
+                MainTextBox.Text = MainTextBox.Text + "\n" + nameString + " : " + decryptedText;
+
             }));
         }
 
